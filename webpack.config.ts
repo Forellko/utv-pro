@@ -9,9 +9,12 @@ const paths: BuildPaths = {
   html: path.resolve(__dirname, 'public', 'index.html'),
 };
 
+const PORT = 3000;
+
 const config: webpack.Configuration = buildWebpackConfig({
   mode: 'development',
   paths: paths,
+  port: PORT,
 });
 
 export default config;
