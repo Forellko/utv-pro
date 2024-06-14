@@ -23,7 +23,7 @@ export function buildWebpackConfig(
       rules: buildLoaders(),
     },
     resolve: buildResolvers(),
-    devtool: 'inline-source-map',
-    devServer: buildDevServer(options),
+    devtool: mode === 'development' ? 'inline-source-map' : undefined,
+    devServer: mode === 'development' ? buildDevServer(options) : undefined,
   };
 }
