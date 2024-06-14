@@ -10,5 +10,10 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
-  plugins: [new HTMLWebpackPlugin()],
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html'),
+    }),
+    new webpack.ProgressPlugin(),
+  ],
 };
