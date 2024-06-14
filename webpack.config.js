@@ -1,4 +1,6 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
@@ -8,4 +10,5 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
+  plugins: [new HTMLWebpackPlugin()],
 };
