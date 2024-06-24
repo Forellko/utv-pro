@@ -1,5 +1,10 @@
 import ReactDOM from 'react-dom/client';
-import { Counter } from './components/Counter';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Counter />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
